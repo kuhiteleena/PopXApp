@@ -127,4 +127,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙌 Author
 
 Made with ❤️ by **Your Name**  
-GitHub: [@your-username](https://github.com/your-username)
+GitHub: kuhiteleena (https://github.com/kuhiteleena/PopXApp)
