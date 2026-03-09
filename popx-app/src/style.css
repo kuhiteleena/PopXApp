@@ -1,0 +1,357 @@
+/* ── Global ─────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F7F8F9;
+}
+
+/* ── Phone Frame ─────────────────────────────────── */
+.frame-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-card {
+  width: 360px;
+  min-height: 600px;
+  background: #F7F8F9;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+   padding-top: 20px;
+}
+
+/* ── Input Box (floating label) ──────────────────── */
+.input-box {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #F7F8F9;
+}
+
+.input-box .field-label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: #F7F8F9;
+  padding: 0 4px;
+  font-size: 11px;
+  color: #6C3CE2;
+  font-weight: 600;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+}
+
+/* ── Field Wrap ──────────────────────────────────── */
+.field-wrap {
+  margin-bottom: 18px;
+}
+
+.field-label {
+  font-size: 11px;
+  color: #6C3CE2;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  margin-top: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button.primary {
+  background: #ccc;
+  color: #fff;
+  cursor: default;
+}
+
+button.primary:not(:disabled) {
+  background: #6C25FF ;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #D9CFF5;
+  color: black;
+  cursor: pointer;
+}
+
+/* ── Welcome Screen ──────────────────────────────── */
+.welcome-top {
+  flex: 1;
+  background: #F7F8F9;
+  min-height: 280px;
+}
+
+.welcome-content {
+  padding: 28px 24px 36px;
+    background: #F7F8F9;
+}
+
+.welcome-content h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.welcome-content p {
+  font-size: 14px;
+  color: #888B8E;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ── Login Screen ────────────────────────────────── */
+.input-box{
+    background: #F7F8F9;
+
+}
+.field-wrap{
+        background: #F7F8F9;
+
+}
+.login-content {
+  padding: 28px 20px 20px;
+  flex: 1;
+background: #F7F8F9;
+}
+
+.login-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.login-content p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* ── Register Screen ─────────────────────────────── */
+/* .register-content {
+  padding: 40px 32px 100px;
+  overflow-y: auto;
+  background: #F7F8F9;
+  flex: 1;
+} */
+.register-content {
+  padding: 20px 24px 100px;  /* ← increase bottom padding */
+  overflow-y: auto;
+  background: #F7F8F9;
+  flex: 1;
+}
+.register-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.register-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #E5A000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.agency-label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 28px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.radio-circle.active {
+  border-color: #6C3CE2;
+}
+
+.radio-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #6C3CE2;
+}
+
+/* .register-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 32px;
+  background: #F7F8F9;
+  /* border-top: 1px solid #eee; */
+/* }  */
+.register-footer {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  padding: 0 24px;
+  background: transparent;
+  border-top: none;
+}
+/* ── Account Settings Screen ─────────────────────── */
+.settings-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.settings-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.profile {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #F7F8F9;
+  /* border-bottom: 1px dashed #ddd; */
+}
+
+.avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #c8a882;
+}
+
+.camera-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6C3CE2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.profile-info p:first-child {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.profile-info p:last-child {
+  font-size: 13px;
+  font-weight: 450;
+  color: black;
+  margin-top: 3px;
+}
+
+.settings-bio {
+  padding: 8px 20px;
+  font-weight: bold;
+  border-bottom: 1px dashed #ddd;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  background: #F7F8F9;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #6C3CE2;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  width: auto;
+  padding: 20px;
+  padding-bottom: 290px;
+  margin-top: 0;
+  background: #F7F8F9;
+}
+
+
+.input-error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+  font-size: 11px;
+  margin-top: 5px;
+  padding-left: 4px;
+}
